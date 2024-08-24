@@ -8,7 +8,7 @@ public class Hero {
    static {
       random = new Random();
    }
-   
+   private String unit; // Поле для зберігання імені юніта
    private String name;
    private int HP;
    private int maxAttack;
@@ -16,6 +16,7 @@ public class Hero {
 
    //Ініціалізатор
    {
+      generateUnit(); //Додаємо ім'я Юніта
       alive = true;
    }
    
@@ -65,10 +66,15 @@ public class Hero {
       return random.nextInt(maxAttack);
    }
 
+   // Метод для генерації імені Юніта
+   private void generateUnit() {
+      int randomNumber = random.nextInt(1000); // Генеруємо випадкове число від 0 до 999
+      this.unit = "Unit #" + randomNumber; // Об'єднуємо число з "Unit"
+   }
    
    @Override
    public String toString() {
-      return String.format("name: %s, HP %s, maxAttack: %s, alive: %s",
-            name, HP, maxAttack, alive);
+      return String.format("%s, name: %s, HP %s, maxAttack: %s, alive: %s",
+            unit,name, HP, maxAttack, alive);
    }
 }

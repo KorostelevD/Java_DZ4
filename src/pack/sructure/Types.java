@@ -2,9 +2,9 @@ package pack.sructure;
 
 public enum Types {
    PALADIN,
-   BERSERK
- /*  WIZARD,
+   BERSERK,
+   WIZARD,
    WARLOCK,
    ELF,
-   HUNTER,*/
+   HUNTER,
 }

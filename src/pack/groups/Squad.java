@@ -2,8 +2,7 @@ package pack.groups;
 
 import pack.sructure.Types;
 import pack.sructure.base.Hero;
-import pack.sructure.types.Berserk;
-import pack.sructure.types.Paladin;
+import pack.sructure.types.*;
 
 import java.util.Random;
 
@@ -26,6 +25,10 @@ public class Squad {
             heroes[i] = switch (type) {
                 case PALADIN -> new Paladin("Paladin", 110,30,20);
                 case BERSERK -> new Berserk("Berserk", 130,50,13);
+                case WIZARD -> new Wizard("Wizard", 110,30,20);
+                case WARLOCK -> new Warlock("Warlock", 130,50,13);
+                case ELF -> new Elf("Elf", 110,30,20);
+                case HUNTER -> new Hunter("Hunter", 130,50,13);
 
                 default -> throw new IllegalStateException("Unexpected value: " + type);
             };
