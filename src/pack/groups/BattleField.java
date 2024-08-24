@@ -11,12 +11,12 @@ public class BattleField {
     public BattleField (int size){
         s1 = new Squad(size);
         s2 = new Squad(size);
-        int index1 = 0, index2 = 0; //індекси героїв
     }
 
     public void  fight(){
         int step = 1;
         Hero h1, h2;
+        int index1 = 0, index2 = 0; //індекси героїв
 
         while (s1.anyAlive() && s2.anyAlive()){
             System.out.println("step: " + step++);
