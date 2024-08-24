@@ -16,7 +16,6 @@ public class BattleField {
     public void  fight(){
         int step = 1;
         Hero h1, h2;
-        int index1 = 0, index2 = 0; //індекси героїв
 
         while (s1.anyAlive() && s2.anyAlive()){
             System.out.println("step: " + step++);
@@ -51,5 +50,12 @@ public class BattleField {
             System.out.println("1 Squad Win");
         else
             System.out.println("2 Squad Win");
+
+        System.out.println(s1.anyAlive());
+        System.out.println(s2.anyAlive());
+
+
     }
+
+
 }
