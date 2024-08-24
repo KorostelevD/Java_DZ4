@@ -23,7 +23,7 @@ public class Squad {
 
             //Персонажі можне додати
             heroes[i] = switch (type) {
-                case PALADIN -> new Paladin("Paladin", 110,30,20);
+                case PALADIN -> new Paladin("Paladin", 150,50,20);
                 case BERSERK -> new Berserk("Berserk", 130,50,13);
                 case WIZARD -> new Wizard("Wizard", 110,30,20);
                 case WARLOCK -> new Warlock("Warlock", 130,50,13);

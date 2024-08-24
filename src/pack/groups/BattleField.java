@@ -11,6 +11,7 @@ public class BattleField {
     public BattleField (int size){
         s1 = new Squad(size);
         s2 = new Squad(size);
+        int index1 = 0, index2 = 0; //індекси героїв
     }
 
     public void  fight(){
