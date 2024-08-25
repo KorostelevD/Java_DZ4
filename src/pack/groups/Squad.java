@@ -23,12 +23,12 @@ public class Squad {
 
             //Персонажі можне додати
             heroes[i] = switch (type) {
-                case PALADIN -> new Paladin("Paladin", 150,50,20);
-                case BERSERK -> new Berserk("Berserk", 130,50,13);
-                case WIZARD -> new Wizard("Wizard", 110,30,20);
-                case WARLOCK -> new Warlock("Warlock", 130,50,13);
+                case PALADIN -> new Paladin("Paladin", 150,50,25);
+                case BERSERK -> new Berserk("Berserk", 130,50,15);
+                case WIZARD -> new Wizard("Wizard", 110,30,150);
+                case WARLOCK -> new Warlock("Warlock", 130,50,100);
                 case ELF -> new Elf("Elf", 110,30,20);
-                case HUNTER -> new Hunter("Hunter", 130,50,13);
+                case HUNTER -> new Hunter("Hunter", 130,50,15);
 
                 default -> throw new IllegalStateException("Unexpected value: " + type);
             };

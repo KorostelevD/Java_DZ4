@@ -17,6 +17,17 @@ public abstract class Archer extends Hero {
    public void setCharges(int charges) {
       this.charges = charges;
    }
+
+   @Override
+   public int attack() {
+      int baseAttack = super.attack(); // Виклик базового методу атаки з Hero
+      if (charges > 0) {
+         charges--; // Зменшуємо кількість стріл після атаки
+         return baseAttack + 10; // Додаємо 10 до базової атаки
+      } else {
+         return baseAttack; // Якщо немає стріл, звичайна атака
+      }
+   }
    
    @Override
    public String toString() {

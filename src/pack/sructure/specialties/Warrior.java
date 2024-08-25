@@ -17,10 +17,13 @@ public abstract class Warrior extends Hero {
    public void setArmor(int armor) {
       this.armor = armor;
    }
-   
+
    @Override
    public void takeDamage(int attack) {
-      super.takeDamage(attack - armor);
+      // Використання захисту: броня зменшує шкоду
+      int damage = Math.max(0, attack - armor); // Щоб уникнути негативного значення шкоди
+      super.takeDamage(damage); // Викликаємо базовий метод з модифікованою шкодою
+
    }
 
 

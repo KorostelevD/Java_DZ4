@@ -15,7 +15,7 @@ public class BattleField {
 
     public void  fight(){
         int step = 1;
-        Hero h1, h2;
+        Hero h1 = null, h2 = null;
 
         while (s1.anyAlive() && s2.anyAlive()){
             System.out.println("step: " + step++);
@@ -46,13 +46,17 @@ public class BattleField {
         }
         //win
 
-        if (s1.anyAlive())
+        if (s1.anyAlive()) {
             System.out.println("1 Squad Win");
-        else
+            System.out.println("The remaining unit " + h1);
+        }
+        else {
             System.out.println("2 Squad Win");
+            System.out.println("The remaining unit " + h2);
+        }
 
-        System.out.println(s1.anyAlive());
-        System.out.println(s2.anyAlive());
+        System.out.println("Live units of the first command: " + s1.anyAlive());
+        System.out.println("Live units of the second command: " + s2.anyAlive());
 
 
     }
